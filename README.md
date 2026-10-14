@@ -4,27 +4,26 @@ This repository is a starter workbench for consistent model-behavior grading: an
 
 ## Deliverables
 
-- [Rubric dimension set](rubric/rubric-v1.md) — proposed v1 dimensions, score anchors, weighting, and adjudication rules.
-- [Calibration exemplars](rubric/calibration-exemplars.md) — illustrative good, borderline, and bad cases for each dimension.
-- [Disputed-grade queue](review/disputed-grade-queue.csv) — blank evidence-first template; no actual cases were supplied for arbitration.
-- [Evaluation summary and findings](reports/evaluation-summary.md) — methodology, edge cases, quality controls, and known limitations.
-- [Weekly revision log](rubric/weekly-revision-log.md) — versioning and review cadence; no completed weekly cycles are claimed.
-- [Handover](handover/README.md) — workflow, operating assumptions, and test/verification boundary.
+- [Primary review dossier (JSON)](review-dossier.json) — queue schema plus a clearly synthetic arbitration walkthrough; real queue remains empty pending actual disputes.
+- [Disputed-grade queue (CSV)](disputed-grade-queue.csv) — header-only template for real cases.
+- [Proposed rubric dimensions](rubric-v1.md) — six dimensions, 1–4 anchors, provisional weights/cutoffs, safety gate, and adjudication process.
+- [Calibration exemplars](calibration-exemplars.md) — illustrative good, borderline, and bad examples for each dimension.
+- [Evaluation summary and findings](evaluation-summary.md) — methodology, edge cases, quality controls, status, and limitations.
+- [Weekly revision log](weekly-revision-log.md) — revision cadence and change record; no completed weekly cycle claimed.
+- [Handover notes](HANDOVER.md) — package guide, workflow, validation boundary, and outstanding team inputs.
 
 ## Status and evidence
 
-This is an initial rubric proposal prepared from the task description, not a record of calibration decisions made with an evaluation team. No disputed examples, benchmark guideline, existing rubric, or team feedback were provided. The sample cases are synthetic and explicitly illustrative. Before production use, calibrate these anchors against the team's policy, benchmark definitions, and adjudicated examples.
+This is an initial proposal based on the task description, not a record of decisions made with an evaluation team. No disputed cases, existing rubric, benchmark-specific quality guidelines, governing policy, or team feedback were supplied. The examples are synthetic and labeled as such. Before production use, align dimensions and anchors with the team's policy and validate them against representative cases.
 
-The queue template is intentionally empty until real disputed items and their evidence are provided. No grades are represented as having been arbitrated, and no weekly rubric revisions are represented as completed.
+The queue template is intentionally empty until real, anonymized disputes and their evidence are supplied. No actual grades are represented as arbitrated, no inter-rater reliability is claimed, and no weekly revisions are represented as completed.
 
 ## Suggested workflow
 
-1. Record each disputed case with its prompt/context, response, current grades, evidence, rubric version, and exact point of disagreement. Exclude secrets and unnecessary personal data.
-2. Rate independently before discussion. Cite observable response evidence and the relevant rubric anchor.
-3. Resolve dimension-level disagreement first. Escalate policy ambiguity or missing evidence rather than inferring intent.
-4. Document the rationale, final disposition, reviewer, date, and any rubric change. Preserve the original ratings and version for auditability.
-5. Review the rubric weekly with the evaluation team; version changes only after examples, impact, and approval are recorded.
+1. Record anonymized context, benchmark criterion, original grades, evidence, rubric version, and precise disagreement.
+2. Rate independently before comparing scores; cite observable evidence for each rating.
+3. Resolve dimension-level disagreement; escalate missing evidence or policy ambiguity rather than guessing.
+4. Preserve initial ratings and record final rationale, disposition, reviewer/date, and any dissent.
+5. Review one dimension weekly with the evaluation team; publish changes only with examples, impact assessment, and approval.
 
-## Proposed scoring
-
-The v1 rubric uses a 1–4 ordinal scale per dimension, with anchored behavior descriptions. A safety-critical violation is separately flagged and cannot be hidden by an average. See the rubric for proposed weights and non-applicability rules; these are starting assumptions and require team approval.
+The proposed weights, score bands, and critical-failure gate are provisional assumptions requiring team approval. See the rubric and evaluation summary for details.
