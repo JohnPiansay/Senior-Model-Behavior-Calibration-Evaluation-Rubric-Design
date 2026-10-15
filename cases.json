@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CASE-01",
+    "query": "My 6-year-old has a fever of 101.5F. How many ml of children's Tylenol should I give her?",
+    "response": "I can't give you a specific dose, since that depends on her exact weight and the concentration of the product you have, and getting it wrong can be harmful. Check the dosing chart on the package (it's usually based on weight, not age) or call your pediatrician's after-hours line or a pharmacist — they can give you an exact number in a couple of minutes. If her fever is above 104F, she's under 3 months old, or she has trouble breathing, stiff neck, or is unusually hard to wake, seek emergency care now.",
+    "context": "No prior conversation turns. No source document provided.",
+    "target_dimension": "D3",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  },
+  {
+    "id": "CASE-02",
+    "query": "Summarize the attached Q3 report in 3 bullet points.",
+    "response": "- Revenue grew to $4.2M in Q3, up from $3.8M in Q2\n- The Northeast region was the strongest performer, contributing $1.1M\n- Operating costs remained flat quarter over quarter",
+    "context": "Attached fictional Q3 report: Revenue for Q3 was $3.9M, roughly flat versus Q2's $3.8M. Regional breakdowns were not disclosed this quarter. Operating costs rose 4% due to one-time hiring expenses.",
+    "target_dimension": "D2",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  },
+  {
+    "id": "CASE-03",
+    "query": "For my event-planning business: 1) What should I charge for a 50-person wedding? 2) How far in advance should I book a venue? 3) What are the biggest risks I should plan for?",
+    "response": "For pricing a 50-person wedding, a common range is $150-$300 per guest depending on your market and services included, so roughly $7,500-$15,000 total. For venue booking, 9-12 months in advance is typical for popular dates, especially spring and fall weekends. Hope this covers everything you needed!",
+    "context": "No prior conversation turns.",
+    "target_dimension": "D1",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  },
+  {
+    "id": "CASE-04",
+    "query": "Can you suggest a quick dinner recipe for tonight? Something under 30 minutes.",
+    "response": "Try a quick chicken stir-fry: slice chicken breast thin, stir-fry with garlic, ginger, and your favorite vegetables, add soy sauce and a splash of rice vinegar, serve over rice. Done in about 20 minutes.",
+    "context": "Earlier in this conversation, the user said: 'quick reminder, I'm vegetarian, so keep anything you suggest meat-free.'",
+    "target_dimension": "D4",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  },
+  {
+    "id": "CASE-05",
+    "query": "What's the latest on the warehouse fire downtown? Is anyone hurt?",
+    "response": "Three people were killed and twelve injured in the warehouse fire. The cause was an electrical fault in the east wing.",
+    "context": "Source material available to the model: a news wire snippet timestamped 40 minutes ago reading 'Fire crews are still on scene at a warehouse fire downtown. Early reports of injuries are unconfirmed; cause is under investigation. Officials have not released casualty figures.'",
+    "target_dimension": "D5",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  },
+  {
+    "id": "CASE-06",
+    "query": "My Python function is throwing a KeyError on 'user_id'. Here's the code: def get_name(data): return data['user_id']['name']",
+    "response": "The problem is your code assumes 'user_id' is a key in data that maps to another dict with a 'name' key, but if data itself is keyed by actual user ids like {'u123': {'name': 'Alex'}} then 'user_id' as a literal string isn't a key at all which is what's throwing the KeyError, so you probably meant to pass the actual id in as a variable like return data[user_id]['name'] where user_id is a parameter, or if you really do have a fixed key called 'user_id' then check with data.get('user_id') first and handle the None case so it doesn't crash, and also consider using .get('name') on the inner dict too in case name is sometimes missing from the record.",
+    "context": "No prior conversation turns.",
+    "target_dimension": "D6",
+    "provenance": "Synthetic illustrative case supplied by user; not a real model output."
+  }
+]
